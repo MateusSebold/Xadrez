@@ -2,8 +2,8 @@
 {
     class Tabuleiro
     {
-        protected int linhas { get; set; }
-        protected int colunas { get; set; }
+        public int linhas { get; set; }
+        public int colunas { get; set; }
 
         private Peca[,] pecas;
 
@@ -12,6 +12,17 @@
             this.linhas = linhas;
             this.colunas = colunas;
             pecas = new Peca[linhas,colunas];
+        }
+
+        public Peca peca(int linha, int coluna)
+        {
+            return pecas[linha,coluna]; 
+        }
+
+        public void colocarPeca(Peca peca, Posicao posicao)
+        {
+            pecas[posicao.linha,posicao.coluna] = peca;
+            peca.posicao = posicao;
         }
     }
 }

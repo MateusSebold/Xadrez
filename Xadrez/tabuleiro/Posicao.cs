@@ -1,8 +1,8 @@
 ﻿namespace Xadrez.tabuleiro
 {
     class Posicao { 
-        protected int linha { get; set; }
-        protected int coluna { get; set; }
+        public int linha { get; set; }
+        public int coluna { get; set; }
 
         public Posicao(int linha, int coluna) {
             this.linha = linha;

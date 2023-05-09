@@ -2,15 +2,15 @@
 {
     class Peca
     {
-        protected Posicao posicao { get; set; }
+        public Posicao posicao { get; set; }
       
-        protected Cor cor { get;  set; }
-        protected int movimentos { get; set; }
-        protected Tabuleiro tabuleiro { get; set; }
+        public Cor cor { get;  set; }
+        public int movimentos { get; set; }
+        public Tabuleiro tabuleiro { get; set; }
 
-        public Peca (Posicao posicao, Cor cor, Tabuleiro tabuleiro)
+        public Peca (Tabuleiro tabuleiro, Cor cor)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.cor = cor;
             this.tabuleiro = tabuleiro;
             movimentos = 0;
